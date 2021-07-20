@@ -1,0 +1,30 @@
+﻿<script type="text/javascript">
+    function OnClick() {
+        var reportName = "XtraReport1";
+        var paramName = "strParam";
+        var paramValue = document.getElementById("paramValueField").value;
+        var paramQueryString = paramName + '=' + paramValue;
+
+        DocumentViewer.OpenReport(reportName + "?" + paramQueryString);
+    }
+</script>
+
+<input id="paramValueField" type="text" />
+
+<button onclick="OnClick()" type="button">Submit</button>
+
+@{
+    var viewerRender = Html.DevExpress().WebDocumentViewer("DocumentViewer")
+        .Height("1000px")
+        .Bind("XtraReport1");
+    @viewerRender.RenderHtml()
+}
+
+@section Scripts {
+    <link href="~/css/dx-reporting-skeleton-screen.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+    <script src="~/js/reporting.thirdparty.bundle.js"></script>
+    <script src="~/js/viewer.part.bundle.js"></script>
+
+    @viewerRender.RenderScripts()
+}
