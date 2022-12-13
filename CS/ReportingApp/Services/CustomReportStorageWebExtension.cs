@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Web;
 using DevExpress.XtraReports.UI;
 using Microsoft.AspNetCore.Hosting;
 using ReportingApp.PredefinedReports;
-using System.Web;
+
 
 namespace ReportingApp.Services
 {
@@ -82,9 +83,11 @@ namespace ReportingApp.Services
                     }
                 }
             } catch (Exception ex) {
-                throw new DevExpress.XtraReports.Web.ClientControls.FaultException("Could not get report data.", ex);
+                throw new DevExpress.XtraReports.Web.ClientControls.FaultException(
+                    "Could not get report data.", ex);
             }
-            throw new DevExpress.XtraReports.Web.ClientControls.FaultException(string.Format("Could not find report '{0}'.", url));
+            throw new DevExpress.XtraReports.Web.ClientControls.FaultException(
+                string.Format("Could not find report '{0}'.", url));
         }
 
         public override Dictionary<string, string> GetUrls() {
