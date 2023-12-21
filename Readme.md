@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1020315)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Reporting for ASP.NET Core - Specify Parameter Values in an ASP.NET Core Reporting Application
+# Reporting for ASP.NET Core - Specify Parameter Value on Button Click
 
 This example demonstrates how to submit parameter values on button click and use the [Document Viewer's Client-Side API](https://docs.devexpress.com/XtraReports/401793?v=21.1) to pass the values to the report.
 
