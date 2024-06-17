@@ -1,3 +1,4 @@
+﻿#region usings
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -5,6 +6,7 @@ using System.Linq;
 using System.Web;
 using DevExpress.XtraReports.UI;
 using Microsoft.AspNetCore.Hosting;
+#endregion
 using ReportingApp.PredefinedReports;
 
 
@@ -42,6 +44,7 @@ namespace ReportingApp.Services
             return Path.GetFileName(url) == url;
         }
 
+        #region parseUrlAndApplyParametersToReport
         public override byte[] GetData(string url) {
             try {
                 // Parse the string with the report name and parameter values.
@@ -89,6 +92,7 @@ namespace ReportingApp.Services
             throw new DevExpress.XtraReports.Web.ClientControls.FaultException(
                 string.Format("Could not find report '{0}'.", url));
         }
+        #endregion
 
         public override Dictionary<string, string> GetUrls() {
             // Returns a dictionary of the existing report URLs and display names. 
