@@ -6,7 +6,7 @@
 <!-- default badges end -->
 # Reporting for ASP.NET Core - Specify Parameter Value on Button Click
 
-This example demonstrates how to submit parameter values on button click and use the [Document Viewer's Client-Side API](https://docs.devexpress.com/XtraReports/401793?v=21.1) to pass the values to the report.
+This example demonstrates how to submit parameter values on button click and use the [Document Viewer's Client-Side API](https://docs.devexpress.com/XtraReports/401793) to pass the values to the report.
 
 ![](Images/asp-net-core-specify-parameters-on-button-click.png)
 
@@ -32,3 +32,4 @@ This example demonstrates how to submit parameter values on button click and use
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
